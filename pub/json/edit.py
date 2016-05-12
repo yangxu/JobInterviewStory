@@ -1,0 +1,249 @@
+file = open('a000.csv', 'r')
+
+lines = file.readlines()
+line1 = lines[0]
+line2 = lines[1]
+line3 = lines[2]
+
+template = """
+{ "height":10,
+ "layers":[
+        {
+         "data":[%s],
+         "height":10,
+         "name":"tiles2",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":14,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[%s],
+         "height":10,
+         "name":"tiles1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":14,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[%s],
+         "height":10,
+         "name":"collisions",
+         "opacity":0.5,
+         "type":"tilelayer",
+         "visible":true,
+         "width":14,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "height":10,
+         "name":"objects",
+         "objects":[
+                {
+                 "gid":4,
+                 "height":0,
+                 "name":"s000",
+                 "properties":
+                    {
+                     "area":"a001",
+                     "direction":"ur"
+                    },
+                 "type":"stairs",
+                 "visible":true,
+                 "width":0,
+                 "x":352,
+                 "y":128
+                }, 
+                {
+                 "gid":3,
+                 "height":0,
+                 "name":"player",
+                 "properties":
+                    {
+                     "prevArea":"a001"
+                    },
+                 "type":"player",
+                 "visible":true,
+                 "width":0,
+                 "x":320,
+                 "y":128
+                }, 
+                {
+                 "gid":3,
+                 "height":0,
+                 "name":"player",
+                 "properties":
+                    {
+                     "prevArea":"a000"
+                    },
+                 "type":"player",
+                 "visible":true,
+                 "width":0,
+                 "x":128,
+                 "y":160
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "width":14,
+         "x":0,
+         "y":0
+        }],
+ "orientation":"orthogonal",
+ "properties":
+    {
+     "music":"shadesOfRed",
+     "musicVol":"0.25"
+    },
+ "tileheight":32,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "image":"..\/img\/tile-map.gif",
+         "imageheight":1600,
+         "imagewidth":1600,
+         "margin":0,
+         "name":"Tile Map",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":32,
+         "tilewidth":32
+        }],
+ "tilewidth":32,
+ "version":1,
+ "width":14
+}
+"""%(line1, line2, line3)
+file = open("a000.json", "w")
+file.write(template)
+file.close()
+
+
+
+template = """
+{ "height":10,
+ "layers":[
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 630, 630, 630, 630, 630, 630, 630, 630, 630, 630, 630, 630, 0, 0, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 680, 0, 0, 731, 732, 732, 732, 732, 732, 732, 732, 732, 732, 730, 730, 0, 0, 781, 333, 334, 334, 334, 334, 335, 782, 782, 782, 730, 730, 0, 0, 781, 383, 384, 384, 384, 384, 385, 782, 782, 782, 730, 730, 0, 0, 781, 383, 384, 384, 384, 384, 385, 782, 782, 782, 782, 782, 0, 0, 781, 433, 434, 434, 434, 434, 435, 782, 782, 782, 782, 782, 0, 0, 781, 782, 782, 782, 782, 782, 782, 782, 782, 782, 782, 782, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":10,
+         "name":"tiles2",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":14,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 137, 292, 293, 140, 141, 436, 437, 0, 0, 0, 0, 0, 0, 0, 187, 342, 343, 190, 191, 486, 487, 0, 0, 46, 47, 0, 0, 0, 0, 392, 393, 240, 241, 0, 0, 0, 833, 96, 97, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 883, 344, 344, 0, 0, 0, 0, 590, 897, 898, 594, 0, 0, 0, 0, 394, 394, 0, 0, 0, 0, 593, 947, 948, 344, 0, 0, 0, 1146, 1147, 1148, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1196, 1197, 1198, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":10,
+         "name":"tiles1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":14,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[ 2,2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 2, 2, 2, 2, 0, 0, 0, 0, 2, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+         "height":10,
+         "name":"collisions",
+         "opacity":0.5,
+         "type":"tilelayer",
+         "visible":true,
+         "width":14,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "height":10,
+         "name":"objects",
+         "objects":[
+                {
+                 "gid":4,
+                 "height":0,
+                 "name":"s000",
+                 "properties":
+                    {
+                     "area":"a001",
+                     "direction":"ur"
+                    },
+                 "type":"stairs",
+                 "visible":true,
+                 "width":0,
+                 "x":352,
+                 "y":128
+                }, 
+                {
+                 "gid":3,
+                 "height":0,
+                 "name":"player",
+                 "properties":
+                    {
+                     "prevArea":"a001"
+                    },
+                 "type":"player",
+                 "visible":true,
+                 "width":0,
+                 "x":320,
+                 "y":128
+                }, 
+                {
+                 "gid":3,
+                 "height":0,
+                 "name":"player",
+                 "properties":
+                    {
+                     "prevArea":"a000"
+                    },
+                 "type":"player",
+                 "visible":true,
+                 "width":0,
+                 "x":128,
+                 "y":160
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "width":14,
+         "x":0,
+         "y":0
+        }],
+ "orientation":"orthogonal",
+ "properties":
+    {
+     "music":"shadesOfRed",
+     "musicVol":"0.25"
+    },
+ "tileheight":32,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "image":"..\/img\/tile-map.gif",
+         "imageheight":1600,
+         "imagewidth":1600,
+         "margin":0,
+         "name":"Tile Map",
+         "properties":
+            {
+
+            },
+         "spacing":0,
+         "tileheight":32,
+         "tilewidth":32
+        }],
+ "tilewidth":32,
+ "version":1,
+ "width":14
+}
+"""
